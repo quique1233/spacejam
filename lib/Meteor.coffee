@@ -134,7 +134,7 @@ class Meteor extends EventEmitter
 
     @childProcess = new ChildProcess()
 
-    @childProcess.spawn("METEOR_UNSAFE_PERM=false meteor",args,options)
+    @childProcess.spawn("meteor",args,options)
 
     @childProcess.child.on "exit", (code,signal) =>
       @emit "exit",code,signal
