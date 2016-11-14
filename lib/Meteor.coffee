@@ -96,6 +96,7 @@ class Meteor extends EventEmitter
   # @options
   # @parseCommandLine
   runTestCommand: (command, options = {})=>
+    console.log 'Running custom command'
     log.debug "Meteor.runTestCommand()", arguments
     expect(options, "options should be an object.").to.be.an "object"
     expect(@childProcess, "Meteor's child process is already running").to.be.null
