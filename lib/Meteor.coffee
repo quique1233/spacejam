@@ -112,7 +112,7 @@ class Meteor extends EventEmitter
 
     args = @getTestArgs(command, @options)
 
-    log.debug 'meteor args=', args
+    log.debug 'METEOR_UNSAFE_PERM=false meteor args=', args
 
     env = _.clone(process.env)
 #   So packages will know they're running in the context of test-packages.
